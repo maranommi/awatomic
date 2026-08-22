@@ -87,13 +87,28 @@ main {
 
 
 /* --------------------------------------------------
-   INTRO
+   WORKS
 -------------------------------------------------- */
 
+.works {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 18px;
+    row-gap: 100px;
+}
+
+
+/* Intro takes full width */
+
 .intro {
+    grid-column: 1 / -1;
+
     width: 50%;
 
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 
     font-size: 13px;
 }
@@ -103,27 +118,10 @@ main {
 }
 
 
-/* --------------------------------------------------
-   WORKS
--------------------------------------------------- */
-
-.works {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 18px;
-    row-gap: 100px;
-}
-
-
-.intro {
-    grid-column: 1 / -1;
-}
-
+/* Individual works */
 
 .work {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 
@@ -138,11 +136,13 @@ main {
     object-fit: contain;
 }
 
+
 .work-info {
     margin-top: 8px;
 
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 8px 20px;
 
     font-size: 11px;
 }
@@ -187,18 +187,63 @@ main {
 -------------------------------------------------- */
 
 .cv-content {
+    max-width: 650px;
+}
+
+
+/* Category headings */
+
+.cv-category {
+    margin-top: 45px;
+    margin-bottom: 20px;
+
+    font-size: 13px;
+}
+
+
+/* First category shouldn't have huge empty space */
+
+.cv-category:first-child {
+    margin-top: 0;
+}
+
+
+/* CV lists */
+
+.cv-list {
     display: grid;
 
     grid-template-columns: 80px 1fr;
 
-    row-gap: 25px;
+    row-gap: 20px;
+}
 
-    max-width: 600px;
+
+.cv-item {
+    display: contents;
 }
 
 
 .cv-year {
     color: #555;
+}
+
+
+/* Press links */
+
+.cv-list a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+
+/* --------------------------------------------------
+   WORKSHOPS
+-------------------------------------------------- */
+
+#workshops .text-content {
+    max-width: 500px;
 }
 
 
@@ -242,6 +287,8 @@ footer {
     }
 
 
+    /* Header */
+
     .site-header {
         position: relative;
 
@@ -260,25 +307,37 @@ footer {
     }
 
 
+    /* Main */
+
     main {
         padding: 40px 15px 60px;
+    }
+
+
+    /* Works */
+
+    .works {
+        grid-template-columns: 1fr;
+
+        row-gap: 90px;
     }
 
 
     .intro {
         width: 100%;
 
-        margin-bottom: 70px;
+        margin-bottom: 30px;
     }
 
 
     .work {
-        margin-bottom: 90px;
+        margin: 0;
     }
 
 
     .work img {
         width: 100%;
+        height: auto;
         max-height: none;
     }
 
@@ -292,8 +351,11 @@ footer {
 
     .work-info span {
         display: block;
+        margin-bottom: 2px;
     }
 
+
+    /* Text sections */
 
     .text-section {
         margin-top: 130px;
@@ -307,15 +369,34 @@ footer {
     }
 
 
+    /* CV */
+
     .cv-content {
-        grid-template-columns: 60px 1fr;
+        max-width: 100%;
     }
 
+
+    .cv-category {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+
+    .cv-list {
+        grid-template-columns: 60px 1fr;
+
+        row-gap: 20px;
+    }
+
+
+    /* Contact */
 
     .contact {
         margin-bottom: 130px;
     }
 
+
+    /* Footer */
 
     footer {
         padding: 15px;
