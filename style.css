@@ -6,9 +6,11 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     margin: 0;
@@ -18,9 +20,11 @@ body {
     color: #111;
 
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 13px;
     line-height: 1.4;
 }
+
 
 
 /* --------------------------------------------------
@@ -29,12 +33,15 @@ body {
 
 a {
     color: #111;
+
     text-decoration: none;
 }
+
 
 a:hover {
     text-decoration: underline;
 }
+
 
 
 /* --------------------------------------------------
@@ -52,6 +59,7 @@ a:hover {
     padding: 18px 22px;
 
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
 
@@ -63,18 +71,22 @@ a:hover {
 
 .artist-name {
     font-size: 14px;
+
     font-weight: normal;
 }
 
 
 nav {
     display: flex;
+
     gap: 18px;
 }
+
 
 nav a {
     font-size: 13px;
 }
+
 
 
 /* --------------------------------------------------
@@ -86,20 +98,15 @@ main {
 }
 
 
+
 /* --------------------------------------------------
    WORKS
 -------------------------------------------------- */
 
 .works {
     width: 100%;
-
-    display: grid;
-
-    grid-template-columns: repeat(12, 1fr);
-
-    column-gap: 18px;
-    row-gap: 80px;
 }
+
 
 
 /* --------------------------------------------------
@@ -107,67 +114,62 @@ main {
 -------------------------------------------------- */
 
 .intro {
-    grid-column: 1 / -1;
-
     width: 100%;
 
-    margin: 0 0 10px 0;
+    margin: 0 0 45px 0;
 
     font-size: 13px;
 }
 
+
 .intro p {
     margin: 0;
+
     line-height: 1.3;
 }
 
 
+
 /* --------------------------------------------------
-   INDIVIDUAL WORKS
+   WORK ROWS
+-------------------------------------------------- */
+
+.work-row {
+    display: grid;
+
+    width: 100%;
+
+    gap: 18px;
+
+    margin-bottom: 80px;
+}
+
+
+/* Three images */
+
+.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Four images */
+
+.four-columns {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+/* --------------------------------------------------
+   INDIVIDUAL WORK
 -------------------------------------------------- */
 
 .work {
+    min-width: 0;
+
     margin: 0;
 }
 
-
-/* Første to rekker: 3 bilder */
-
-.work:nth-of-type(2),
-.work:nth-of-type(3),
-.work:nth-of-type(4),
-.work:nth-of-type(5),
-.work:nth-of-type(6),
-.work:nth-of-type(7) {
-    grid-column: span 4;
-}
-
-
-/* Tredje rekke: 4 bilder */
-
-.work:nth-of-type(8),
-.work:nth-of-type(9),
-.work:nth-of-type(10),
-.work:nth-of-type(11) {
-    grid-column: span 3;
-}
-
-
-/* Fjerde og femte rekke: 4 skulpturer */
-
-.work:nth-of-type(12),
-.work:nth-of-type(13),
-.work:nth-of-type(14),
-.work:nth-of-type(15),
-.work:nth-of-type(16),
-.work:nth-of-type(17),
-.work:nth-of-type(18),
-.work:nth-of-type(19) {
-    grid-column: span 3;
-}
-
-
-/* Bilder */
 
 .work img {
     display: block;
@@ -179,18 +181,19 @@ main {
 }
 
 
-/* Informasjon under bildene */
-
 .work-info {
     margin-top: 8px;
 
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 8px 20px;
 
     font-size: 11px;
 }
+
+
 
 /* --------------------------------------------------
    TEXT SECTIONS
@@ -202,6 +205,7 @@ main {
     margin-top: 200px;
 
     display: grid;
+
     grid-template-columns: 160px 1fr;
 
     column-gap: 40px;
@@ -212,6 +216,7 @@ main {
     margin: 0;
 
     font-size: 13px;
+
     font-weight: normal;
 }
 
@@ -220,10 +225,13 @@ main {
     max-width: 500px;
 }
 
+
 .text-content p {
     margin-top: 0;
+
     margin-bottom: 20px;
 }
+
 
 
 /* --------------------------------------------------
@@ -239,13 +247,14 @@ main {
 
 .cv-category {
     margin-top: 45px;
+
     margin-bottom: 20px;
 
     font-size: 13px;
 }
 
 
-/* First category shouldn't have huge empty space */
+/* First category */
 
 .cv-category:first-child {
     margin-top: 0;
@@ -273,13 +282,19 @@ main {
 }
 
 
-/* Press links */
+
+/* --------------------------------------------------
+   PRESS LINKS
+-------------------------------------------------- */
 
 .cv-list a {
     text-decoration: underline;
+
     text-decoration-thickness: 1px;
+
     text-underline-offset: 2px;
 }
+
 
 
 /* --------------------------------------------------
@@ -291,6 +306,7 @@ main {
 }
 
 
+
 /* --------------------------------------------------
    CONTACT
 -------------------------------------------------- */
@@ -299,9 +315,11 @@ main {
     margin-bottom: 200px;
 }
 
+
 .contact p {
     margin: 0 0 8px;
 }
+
 
 
 /* --------------------------------------------------
@@ -312,6 +330,7 @@ footer {
     padding: 20px 22px;
 
     display: flex;
+
     justify-content: space-between;
 
     font-size: 11px;
@@ -320,18 +339,23 @@ footer {
 }
 
 
+
 /* --------------------------------------------------
    MOBILE
 -------------------------------------------------- */
 
 @media (max-width: 700px) {
 
+
     body {
         font-size: 13px;
     }
 
 
-    /* Header */
+
+    /* ----------------------------------------------
+       HEADER
+    ---------------------------------------------- */
 
     .site-header {
         position: relative;
@@ -351,37 +375,40 @@ footer {
     }
 
 
-    /* Main */
+
+    /* ----------------------------------------------
+       MAIN
+    ---------------------------------------------- */
 
     main {
         padding: 40px 15px 60px;
     }
 
 
-    /* Works */
 
-    .works {
-        grid-template-columns: 1fr;
-
-        row-gap: 90px;
-    }
-
+    /* ----------------------------------------------
+       WORKS
+    ---------------------------------------------- */
 
     .intro {
-        width: 100%;
-
         margin-bottom: 30px;
     }
 
 
-    .work {
-        margin: 0;
+    .work-row {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        margin-bottom: 60px;
     }
 
 
     .work img {
         width: 100%;
+
         height: auto;
+
         max-height: none;
     }
 
@@ -395,11 +422,15 @@ footer {
 
     .work-info span {
         display: block;
+
         margin-bottom: 2px;
     }
 
 
-    /* Text sections */
+
+    /* ----------------------------------------------
+       TEXT SECTIONS
+    ---------------------------------------------- */
 
     .text-section {
         margin-top: 130px;
@@ -413,7 +444,10 @@ footer {
     }
 
 
-    /* CV */
+
+    /* ----------------------------------------------
+       CV
+    ---------------------------------------------- */
 
     .cv-content {
         max-width: 100%;
@@ -422,6 +456,7 @@ footer {
 
     .cv-category {
         margin-top: 40px;
+
         margin-bottom: 20px;
     }
 
@@ -433,14 +468,20 @@ footer {
     }
 
 
-    /* Contact */
+
+    /* ----------------------------------------------
+       CONTACT
+    ---------------------------------------------- */
 
     .contact {
         margin-bottom: 130px;
     }
 
 
-    /* Footer */
+
+    /* ----------------------------------------------
+       FOOTER
+    ---------------------------------------------- */
 
     footer {
         padding: 15px;
