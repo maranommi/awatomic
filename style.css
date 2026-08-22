@@ -94,19 +94,25 @@ main {
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: repeat(12, 1fr);
 
     column-gap: 18px;
-    row-gap: 100px;
+    row-gap: 80px;
 }
 
 
-/* Intro takes full width */
+/* --------------------------------------------------
+   INTRO
+-------------------------------------------------- */
 
 .intro {
-    width: 50%;
-    margin-top: -20px;
-    margin-bottom: 70px;
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    margin: 0 0 10px 0;
+
     font-size: 13px;
 }
 
@@ -115,12 +121,53 @@ main {
     line-height: 1.3;
 }
 
-/* Individual works */
+
+/* --------------------------------------------------
+   INDIVIDUAL WORKS
+-------------------------------------------------- */
 
 .work {
     margin: 0;
 }
 
+
+/* Første to rekker: 3 bilder */
+
+.work:nth-of-type(2),
+.work:nth-of-type(3),
+.work:nth-of-type(4),
+.work:nth-of-type(5),
+.work:nth-of-type(6),
+.work:nth-of-type(7) {
+    grid-column: span 4;
+}
+
+
+/* Tredje rekke: 4 bilder */
+
+.work:nth-of-type(8),
+.work:nth-of-type(9),
+.work:nth-of-type(10),
+.work:nth-of-type(11) {
+    grid-column: span 3;
+}
+
+
+/* Fjerde og femte rekke: 4 skulpturer */
+
+.work:nth-of-type(12),
+.work:nth-of-type(13),
+.work:nth-of-type(14),
+.work:nth-of-type(15),
+.work:nth-of-type(16),
+.work:nth-of-type(17),
+.work:nth-of-type(18),
+.work:nth-of-type(19) {
+    grid-column: span 3;
+}
+
+
+/* Bilder */
 
 .work img {
     display: block;
@@ -128,22 +175,22 @@ main {
     width: 100%;
     height: auto;
 
-    max-height: calc(100vh - 150px);
-
     object-fit: contain;
 }
 
+
+/* Informasjon under bildene */
 
 .work-info {
     margin-top: 8px;
 
     display: flex;
     flex-wrap: wrap;
+
     gap: 8px 20px;
 
     font-size: 11px;
 }
-
 
 /* --------------------------------------------------
    TEXT SECTIONS
