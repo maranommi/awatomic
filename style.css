@@ -104,19 +104,16 @@ main {
 /* Intro takes full width */
 
 .intro {
-    grid-column: 1 / -1;
-
     width: 50%;
-
-    margin-bottom: 30px;
-
+    margin-top: -20px;
+    margin-bottom: 70px;
     font-size: 13px;
 }
 
 .intro p {
     margin: 0;
+    line-height: 1.3;
 }
-
 
 /* Individual works */
 
