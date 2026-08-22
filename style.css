@@ -109,24 +109,34 @@ main {
 
 .works {
     width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 18px;
+    row-gap: 100px;
+}
+
+
+.intro {
+    grid-column: 1 / -1;
 }
 
 
 .work {
-    margin-bottom: 140px;
+    margin-bottom: 0;
 }
 
 
 .work img {
     display: block;
 
-    width: auto;
-    max-width: 100%;
-    max-height: 78vh;
+    width: 100%;
+    height: auto;
+
+    max-height: calc(100vh - 150px);
 
     object-fit: contain;
 }
-
 
 .work-info {
     margin-top: 8px;
